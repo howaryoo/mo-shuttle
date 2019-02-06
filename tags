@@ -1,0 +1,70 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+4NT_args	android/gradlew.bat	/^:4NT_args$/;"	l
+APPLICATION_ID	build/app/generated/source/buildConfig/debug/com/tikalk/moshuttle/BuildConfig.java	/^  public static final String APPLICATION_ID = "com.tikalk.moshuttle";$/;"	f	class:BuildConfig
+APPLICATION_ID	build/tts/generated/source/buildConfig/debug/com/blounty/tts/BuildConfig.java	/^  public static final String APPLICATION_ID = "com.blounty.tts";$/;"	f	class:BuildConfig
+APP_BASE_NAME	android/gradlew.bat	/^set APP_BASE_NAME=%~n0$/;"	v
+APP_HOME	android/gradlew.bat	/^set APP_HOME=%DIRNAME%$/;"	v
+BUILD_TYPE	build/app/generated/source/buildConfig/debug/com/tikalk/moshuttle/BuildConfig.java	/^  public static final String BUILD_TYPE = "debug";$/;"	f	class:BuildConfig
+BUILD_TYPE	build/tts/generated/source/buildConfig/debug/com/blounty/tts/BuildConfig.java	/^  public static final String BUILD_TYPE = "debug";$/;"	f	class:BuildConfig
+BuildConfig	build/app/generated/source/buildConfig/debug/com/tikalk/moshuttle/BuildConfig.java	/^public final class BuildConfig {$/;"	c
+BuildConfig	build/tts/generated/source/buildConfig/debug/com/blounty/tts/BuildConfig.java	/^public final class BuildConfig {$/;"	c
+CLASSPATH	android/gradlew.bat	/^set CLASSPATH=%APP_HOME%\\gradle\\wrapper\\gradle-wrapper.jar$/;"	v
+CMD_LINE_ARGS	android/gradlew.bat	/^set CMD_LINE_ARGS=$/;"	v
+CMD_LINE_ARGS	android/gradlew.bat	/^set CMD_LINE_ARGS=%*$/;"	v
+CMD_LINE_ARGS	android/gradlew.bat	/^set CMD_LINE_ARGS=%\$$/;"	v
+DEBUG	build/app/generated/source/buildConfig/debug/com/tikalk/moshuttle/BuildConfig.java	/^  public static final boolean DEBUG = Boolean.parseBoolean("true");$/;"	f	class:BuildConfig
+DEBUG	build/tts/generated/source/buildConfig/debug/com/blounty/tts/BuildConfig.java	/^  public static final boolean DEBUG = Boolean.parseBoolean("true");$/;"	f	class:BuildConfig
+DEFAULT_JVM_OPTS	android/gradlew.bat	/^set DEFAULT_JVM_OPTS=$/;"	v
+DIRNAME	android/gradlew.bat	/^if "%DIRNAME%" == "" set DIRNAME=.$/;"	v
+DIRNAME	android/gradlew.bat	/^set DIRNAME=%~dp0$/;"	v
+FLAVOR	build/app/generated/source/buildConfig/debug/com/tikalk/moshuttle/BuildConfig.java	/^  public static final String FLAVOR = "";$/;"	f	class:BuildConfig
+FLAVOR	build/tts/generated/source/buildConfig/debug/com/blounty/tts/BuildConfig.java	/^  public static final String FLAVOR = "";$/;"	f	class:BuildConfig
+GeneratedPluginRegistrant	android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java	/^public final class GeneratedPluginRegistrant {$/;"	c
+GeneratedPluginRegistrant_h	ios/Runner/GeneratedPluginRegistrant.h	6;"	d
+JAVA_EXE	android/gradlew.bat	/^set JAVA_EXE=%JAVA_HOME%\/bin\/java.exe$/;"	v
+JAVA_EXE	android/gradlew.bat	/^set JAVA_EXE=java.exe$/;"	v
+JAVA_HOME	android/gradlew.bat	/^set JAVA_HOME=%JAVA_HOME:"=%$/;"	v
+LaunchTheme	build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/tikalk/moshuttle/R.java	/^    public static final int LaunchTheme=0x7f030000;$/;"	f	class:R.style
+MainActivity	android/app/src/main/java/com/tikalk/moshuttle/MainActivity.java	/^public class MainActivity extends FlutterActivity {$/;"	c
+R	build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/blounty/tts/R.java	/^    private R() {}$/;"	m	class:R	file:
+R	build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/blounty/tts/R.java	/^public final class R {$/;"	c
+R	build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/tikalk/moshuttle/R.java	/^public final class R {$/;"	c
+R	build/tts/generated/not_namespaced_r_class_sources/debug/generateDebugRFile/out/com/blounty/tts/R.java	/^    private R() {}$/;"	m	class:R	file:
+R	build/tts/generated/not_namespaced_r_class_sources/debug/generateDebugRFile/out/com/blounty/tts/R.java	/^public final class R {$/;"	c
+VERSION_CODE	build/app/generated/source/buildConfig/debug/com/tikalk/moshuttle/BuildConfig.java	/^  public static final int VERSION_CODE = 1;$/;"	f	class:BuildConfig
+VERSION_CODE	build/tts/generated/source/buildConfig/debug/com/blounty/tts/BuildConfig.java	/^  public static final int VERSION_CODE = -1;$/;"	f	class:BuildConfig
+VERSION_NAME	build/app/generated/source/buildConfig/debug/com/tikalk/moshuttle/BuildConfig.java	/^  public static final String VERSION_NAME = "1.0.0";$/;"	f	class:BuildConfig
+VERSION_NAME	build/tts/generated/source/buildConfig/debug/com/blounty/tts/BuildConfig.java	/^  public static final String VERSION_NAME = "";$/;"	f	class:BuildConfig
+_SKIP	android/gradlew.bat	/^set _SKIP=2$/;"	v
+alreadyRegisteredWith	android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java	/^  private static boolean alreadyRegisteredWith(PluginRegistry registry) {$/;"	m	class:GeneratedPluginRegistrant	file:
+com.blounty.tts	build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/blounty/tts/R.java	/^package com.blounty.tts;$/;"	p
+com.blounty.tts	build/tts/generated/not_namespaced_r_class_sources/debug/generateDebugRFile/out/com/blounty/tts/R.java	/^package com.blounty.tts;$/;"	p
+com.blounty.tts	build/tts/generated/source/buildConfig/debug/com/blounty/tts/BuildConfig.java	/^package com.blounty.tts;$/;"	p
+com.tikalk.moshuttle	android/app/src/main/java/com/tikalk/moshuttle/MainActivity.java	/^package com.tikalk.moshuttle;$/;"	p
+com.tikalk.moshuttle	build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/tikalk/moshuttle/R.java	/^package com.tikalk.moshuttle;$/;"	p
+com.tikalk.moshuttle	build/app/generated/source/buildConfig/debug/com/tikalk/moshuttle/BuildConfig.java	/^package com.tikalk.moshuttle;$/;"	p
+die	android/gradlew	/^die ( ) {$/;"	f
+drawable	build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/tikalk/moshuttle/R.java	/^  public static final class drawable {$/;"	c	class:R
+end	android/gradlew.bat	/^:end$/;"	l
+execute	android/gradlew.bat	/^:execute$/;"	l
+fail	android/gradlew.bat	/^:fail$/;"	l
+findJavaFromJavaHome	android/gradlew.bat	/^:findJavaFromJavaHome$/;"	l
+ic_launcher	build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/tikalk/moshuttle/R.java	/^    public static final int ic_launcher=0x7f020000;$/;"	f	class:R.mipmap
+init	android/gradlew.bat	/^:init$/;"	l
+io.flutter.plugins	android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java	/^package io.flutter.plugins;$/;"	p
+launch_background	build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/tikalk/moshuttle/R.java	/^    public static final int launch_background=0x7f010000;$/;"	f	class:R.drawable
+mainEnd	android/gradlew.bat	/^:mainEnd$/;"	l
+mipmap	build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/tikalk/moshuttle/R.java	/^  public static final class mipmap {$/;"	c	class:R
+omega	android/gradlew.bat	/^:omega$/;"	l
+onCreate	android/app/src/main/java/com/tikalk/moshuttle/MainActivity.java	/^  protected void onCreate(Bundle savedInstanceState) {$/;"	m	class:MainActivity
+registerWith	android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java	/^  public static void registerWith(PluginRegistry registry) {$/;"	m	class:GeneratedPluginRegistrant
+splitJvmOpts	android/gradlew	/^function splitJvmOpts() {$/;"	f
+style	build/app/generated/not_namespaced_r_class_sources/debug/processDebugResources/r/com/tikalk/moshuttle/R.java	/^  public static final class style {$/;"	c	class:R
+warn	android/gradlew	/^warn ( ) {$/;"	f
+win9xME_args	android/gradlew.bat	/^:win9xME_args$/;"	l
+win9xME_args_slurp	android/gradlew.bat	/^:win9xME_args_slurp$/;"	l
