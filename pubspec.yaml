@@ -38,6 +38,8 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+    - assets/fuseteam3-1c284d1e865d.json
 
   # To add assets to your application, add an assets section, like this:
   # assets:

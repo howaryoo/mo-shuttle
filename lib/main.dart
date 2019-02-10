@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dialogflow/flutter_dialogflow.dart';
+import 'package:flutter_dialogflow/dialogflow_v2.dart';
 import 'package:tts/tts.dart';
 
 void main() => runApp(new MyApp());
@@ -63,14 +63,17 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void Response(query) async {
     _textController.clear();
-    Dialogflow dialogflow = Dialogflow(token: "ace83f41827343c19df420f0eaad311e");
-    AIResponse response = await dialogflow.sendQuery(query);
+    // TODO update credentials here
+    AuthGoogle authGoogle = await AuthGoogle(fileJson: "assets/fuseteam3-1c284d1e865d.json").build();
+    Dialogflow dialogflow = Dialogflow(authGoogle: authGoogle, language: Language.ENGLISH);
+    AIResponse response = await dialogflow.detectIntent(query);
+
     ChatMessage message = new ChatMessage(
-      text: response.getMessageResponse(),
+      text: response.getMessage(),
       name: "ShuttleBot",
       type: false,
     );
-    Tts.speak(response.getMessageResponse());
+    Tts.speak(response.getMessage());
     setState(() {
       _messages.insert(0, message);
     });
