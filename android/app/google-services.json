@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "30177002453",
+    "firebase_url": "https://fuseteam3.firebaseio.com",
+    "project_id": "fuseteam3",
+    "storage_bucket": "fuseteam3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30177002453:android:a71b186507707be5",
+        "android_client_info": {
+          "package_name": "com.example.moshuttle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30177002453-up87cleuib5ll08gs7gc0nqk5p07jcth.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD__SlyFNQuzlkLUF2914B0_I1a7ksDwjM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

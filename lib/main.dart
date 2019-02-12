@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dialogflow/dialogflow_v2.dart';
 import 'package:tts/tts.dart';
 import 'package:http/http.dart' as http;
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() => runApp(new MyApp());
 
@@ -37,7 +38,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildTextComposer() {
     return new Column(children: <Widget>[
       new IconTheme(
-        data: new IconThemeData(color: Theme.of(context).accentColor),
+        data: new IconThemeData(color: Theme
+            .of(context)
+            .accentColor),
         child: new Container(
           margin: const EdgeInsets.symmetric(horizontal: 8.0),
           child: new Row(
@@ -47,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   controller: _textController,
                   onSubmitted: _handleSubmitted,
                   decoration:
-                      new InputDecoration.collapsed(hintText: "Send a message"),
+                  new InputDecoration.collapsed(hintText: "Send a message"),
                 ),
               ),
               new Container(
@@ -67,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
             MaterialPageRoute(builder: (context) => SecondRoute()),
           );
         },
-        child: Text("Add Shattle"),
+        child: Text("Add Shuttle"),
       ),
     ]);
   }
@@ -76,10 +79,10 @@ class _MyHomePageState extends State<MyHomePage> {
     _textController.clear();
     // TODO update credentials here
     AuthGoogle authGoogle =
-        await AuthGoogle(fileJson: "assets/fuseteam3-1c284d1e865d.json")
-            .build();
+    await AuthGoogle(fileJson: "assets/fuseteam3-1c284d1e865d.json")
+        .build();
     Dialogflow dialogflow =
-        Dialogflow(authGoogle: authGoogle, language: Language.ENGLISH);
+    Dialogflow(authGoogle: authGoogle, language: Language.ENGLISH);
     AIResponse response = await dialogflow.detectIntent(query);
 
     ChatMessage message = new ChatMessage(
@@ -115,14 +118,16 @@ class _MyHomePageState extends State<MyHomePage> {
       body: new Column(children: <Widget>[
         new Flexible(
             child: new ListView.builder(
-          padding: new EdgeInsets.all(8.0),
-          reverse: true,
-          itemBuilder: (_, int index) => _messages[index],
-          itemCount: _messages.length,
-        )),
+              padding: new EdgeInsets.all(8.0),
+              reverse: true,
+              itemBuilder: (_, int index) => _messages[index],
+              itemCount: _messages.length,
+            )),
         new Divider(height: 1.0),
         new Container(
-          decoration: new BoxDecoration(color: Theme.of(context).cardColor),
+          decoration: new BoxDecoration(color: Theme
+              .of(context)
+              .cardColor),
           child: _buildTextComposer(),
         ),
       ]),
@@ -165,7 +170,10 @@ class ChatMessage extends StatelessWidget {
         child: new Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
-            new Text(this.name, style: Theme.of(context).textTheme.subhead),
+            new Text(this.name, style: Theme
+                .of(context)
+                .textTheme
+                .subhead),
             new Container(
               margin: const EdgeInsets.only(top: 5.0),
               child: new Text(text),
@@ -200,47 +208,56 @@ class SecondRoute extends StatelessWidget {
     final _whenController = TextEditingController();
     return Scaffold(
       appBar: AppBar(
-        title: Text("Second Route"),
+        title: Text("New Shuttle"),
       ),
       body: Center(
           child: Column(
-        children: <Widget>[
-          TextFormField(
-            controller: _fromController,
-            style:
-                new TextStyle(fontSize: 20.0, height: 2.0, color: Colors.black),
-            decoration: new InputDecoration.collapsed(hintText: "From:"),
-          ),
-          TextFormField(
-            controller: _toController,
-            style:
-                new TextStyle(fontSize: 20.0, height: 2.0, color: Colors.black),
-            decoration: new InputDecoration.collapsed(hintText: "To:"),
-          ),
-          TextFormField(
-            controller: _whenController,
-            style:
-                new TextStyle(fontSize: 20.0, height: 2.0, color: Colors.black),
-            decoration: new InputDecoration.collapsed(hintText: "When:"),
-          ),
-          RaisedButton(
-            onPressed: () {
-              _fetchData();
-            },
-            child: Text('Send'),
-          ),
-        ],
-      )),
+            children: <Widget>[
+              new Container(
+                  margin: const EdgeInsets.all(10.0),
+                  child: TextFormField(
+                    controller: _fromController,
+                    style:
+                    new TextStyle(
+                        fontSize: 20.0, color: Colors.black),
+                    decoration: new InputDecoration(
+                        hintText: "From:"),
+                  )
+              ), new Container(
+                margin: const EdgeInsets.all(10.0),
+                child: TextFormField(
+                  controller: _toController,
+                  style:
+                  new TextStyle(
+                      fontSize: 20.0, color: Colors.black),
+                  decoration: new InputDecoration(hintText: "To:"),
+                ),
+              ),
+              new Container(
+                margin: const EdgeInsets.all(10.0),
+                child: TextFormField(
+                  controller: _whenController,
+                  style:
+                  new TextStyle(
+                      fontSize: 20.0, color: Colors.black),
+                  decoration: new InputDecoration(hintText: "When:"),
+                ),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Firestore.instance.collection('schedule').document().setData({
+                    'from': _fromController.text,
+                    'to': _toController.text,
+                    'times': _whenController.text.split(",");
+                  });
+                  _fromController.text = "";
+                  _toController.text = "";
+                  _whenController.text = "";
+                },
+                child: Text('Send'),
+              ),
+            ],
+          )),
     );
-  }
-
-  _fetchData() async {
-    final response =
-        await http.get("https://jsonplaceholder.typicode.com/photos");
-    if (response.statusCode == 200) {
-      debugPrint("aaa");
-    } else {
-      throw Exception('Failed to load photos');
-    }
   }
 }
