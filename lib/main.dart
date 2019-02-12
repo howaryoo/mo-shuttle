@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dialogflow/dialogflow_v2.dart';
 import 'package:tts/tts.dart';
+import 'package:http/http.dart' as http;
 
 void main() => runApp(new MyApp());
 
@@ -224,12 +225,22 @@ class SecondRoute extends StatelessWidget {
           ),
           RaisedButton(
             onPressed: () {
-              Navigator.pop(context);
+              _fetchData();
             },
-            child: Text('Go back!'),
+            child: Text('Send'),
           ),
         ],
       )),
     );
+  }
+
+  _fetchData() async {
+    final response =
+        await http.get("https://jsonplaceholder.typicode.com/photos");
+    if (response.statusCode == 200) {
+      debugPrint("aaa");
+    } else {
+      throw Exception('Failed to load photos');
+    }
   }
 }
