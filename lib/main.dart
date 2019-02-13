@@ -248,7 +248,7 @@ class SecondRoute extends StatelessWidget {
                   Firestore.instance.collection('schedule').document().setData({
                     'from': _fromController.text,
                     'to': _toController.text,
-                    'times': _whenController.text.split(",");
+                    'times': _whenController.text.split(",")
                   });
                   _fromController.text = "";
                   _toController.text = "";
